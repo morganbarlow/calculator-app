@@ -3,7 +3,10 @@ import React, { Component } from 'react';
 
 
 function App() {
-  const [result, setResult] = useState('')
+  // const [result, setResult] = useState('')
+    // not allowed to use this. it is using state! 
+    // wait until Apr, understand STATE first
+    
   return(
     <div className = "page-container">
       <div className = "input-display">
