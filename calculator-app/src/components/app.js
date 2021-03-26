@@ -1,69 +1,28 @@
-import { useState } from "react";
 import React, { Component } from 'react';
 
+import InputDisplay from './input-display.js';
+import Button from "./button.js";
 
-function App() {
-  // const [result, setResult] = useState('')
-    // not allowed to use this. it is using state! 
-    // wait until Apr, understand STATE first
-    
-  return(
-    <div className = "page-container">
-      <div className = "input-display">
-        <form>
-          <input type = 'text' className = 'user-input'/>
-        </form>
-      </div>
+export default class App extends Component {
+    constructor(){
+        super();
 
-      <div className = "button-display">
-        <div className ="button-row">
-          
-          <div className = "buttons">
-            <button>CE</button>
-            <button>C</button>
-            <button>del</button>
-            <button>/</button>
-          </div>
-          <div className = "buttons">
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>*</button>
-          </div>
-          <div className = "buttons">
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>-</button>
-          </div>
-          <div className = "buttons">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>+</button>
-          </div>
-          <div className = "buttons">
-            <button>+/-</button>
-            <button>0</button>
-            <button>.</button>
-            <button>=</button>
-          </div>
+        this.state = {
+            userInput: ""
+        }
+      
+    }
 
-        </div>
-      </div>
-    </div>
-  )
+    render() {
+      console.log(test)
+        return (
+            <div>
+                <div className="calculator-body">
+                    <h1>Morgan's React Calculator</h1>
+                    <InputDisplay userInput={this.state.userInput}/>
+                    <Button onClick={this.onClick}/>
+                </div>
+            </div>
+        );
+    }
 }
-
-export default App
-
-// export default class App extends Component {
-//   render() {
-//     return (
-//       <div className='app'>
-//         <h1>DevCamp React Starter</h1>
-//         <h2>React Skeleton</h2>
-//       </div>
-//     );
-//   }
-// }
