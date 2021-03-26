@@ -1,3 +1,6 @@
+// INPUT DISPLAY is going to be set as a state
+// BUTTON will change INPUT DISPLAY's state
+
 import React, { Component } from 'react';
 
 import InputDisplay from './input-display.js';
@@ -14,7 +17,7 @@ export default class App extends Component {
     }
 
     render() {
-      console.log(test)
+      console.log("test")
         return (
             <div>
                 <div className="calculator-body">

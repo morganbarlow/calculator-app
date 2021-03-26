@@ -2,7 +2,9 @@ import React, { Component } from "react";
 
 
 export default class ButtonDisplay extends Component {
-    
+    constructor(){
+        super()
+    }
     render() {
         return(
             <div className = "button-display">
